@@ -1,6 +1,6 @@
 {
     "name": "htcw_esp_lcd_st7703",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "The st7703 component from the espressif registry packaged for PIO",
     "keywords": ["rgb","lcd"],
     "authors": {

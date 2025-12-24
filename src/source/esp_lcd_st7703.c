@@ -50,8 +50,6 @@ static esp_err_t panel_st7703_disp_on_off(esp_lcd_panel_t *panel, bool on_off);
 esp_err_t esp_lcd_new_panel_st7703(const esp_lcd_panel_io_handle_t io, const esp_lcd_panel_dev_config_t *panel_dev_config,
                                    esp_lcd_panel_handle_t *ret_panel)
 {
-    ESP_LOGI(TAG, "version: %d.%d.%d", ESP_LCD_ST7703_VER_MAJOR, ESP_LCD_ST7703_VER_MINOR,
-             ESP_LCD_ST7703_VER_PATCH);
     ESP_RETURN_ON_FALSE(io && panel_dev_config && ret_panel, ESP_ERR_INVALID_ARG, TAG, "invalid arguments");
     st7703_vendor_config_t *vendor_config = (st7703_vendor_config_t *)panel_dev_config->vendor_config;
     ESP_RETURN_ON_FALSE(vendor_config && vendor_config->mipi_config.dpi_config && vendor_config->mipi_config.dsi_bus, ESP_ERR_INVALID_ARG, TAG,
